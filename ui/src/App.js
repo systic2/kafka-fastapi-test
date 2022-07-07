@@ -222,91 +222,93 @@ const Price = (props) => {
 
 
   return <div style={{margin: 10}}>
-    {type} : {symbol} : {hotime}
+
     <br/>
     <div style={{paddingLeft: 10, fontSize: 12}}>
+
       <table border="1">
+        <caption>{symbol}</caption>
         <thead>
-          <tr>
+          <tr className="top">
             <th>건수</th>
             <th>잔량</th>
-            <th>호가시간</th>
+            <th>{hotime}</th>
             <th>건수</th>
             <th>잔량</th>
           </tr>
         </thead>
         <tbody>
            <tr>
-            <td>{offerno5}</td>
-            <td>{offerrem5}</td>
-            <td>{offerho5}</td>
+            <td className="offer">{offerno5}</td>
+            <td className="offer">{offerrem5}</td>
+            <td className="offerho">{offerho5}</td>
             <td></td>
             <td></td>
           </tr>
           <tr>
-            <td>{offerno4}</td>
-            <td>{offerrem4}</td>
-            <td>{offerho4}</td>
+            <td className="offer">{offerno4}</td>
+            <td className="offer">{offerrem4}</td>
+            <td className="offerho">{offerho4}</td>
             <td></td>
             <td></td>
           </tr>
           <tr>
-            <td>{offerno3}</td>
-            <td>{offerrem3}</td>
-            <td>{offerho3}</td>
+            <td className="offer">{offerno3}</td>
+            <td className="offer">{offerrem3}</td>
+            <td className="offerho">{offerho3}</td>
             <td></td>
             <td></td>
           </tr>
           <tr>
-            <td>{offerno2}</td>
-            <td>{offerrem2}</td>
-            <td>{offerho2}</td>
+            <td className="offer">{offerno2}</td>
+            <td className="offer">{offerrem2}</td>
+            <td className="offerho">{offerho2}</td>
             <td></td>
             <td></td>
           </tr>
           <tr>
-            <td>{offerno1}</td>
-            <td>{offerrem1}</td>
-            <td>{offerho1}</td>
+            <td className="offer">{offerno1}</td>
+            <td className="offer">{offerrem1}</td>
+            <td className="offerho">{offerho1}</td>
             <td></td>
             <td></td>
           </tr>
           <tr>
             <td></td>
             <td></td>
-            <td>{bidho1}</td>
-            <td>{bidrem1}</td>
-            <td>{bidno1}</td>
+            <td className="bidho">{bidho1}</td>
+            <td className="bid">{bidrem1}</td>
+            <td className="bid">{bidno1}</td>
           </tr>
           <tr>
             <td></td>
             <td></td>
-            <td>{bidho2}</td>
-            <td>{bidrem2}</td>
-            <td>{bidno2}</td>
+            <td className="bidho">{bidho2}</td>
+            <td className="bid">{bidrem2}</td>
+            <td className="bid">{bidno2}</td>
           </tr>
           <tr>
             <td></td>
             <td></td>
-            <td>{bidho3}</td>
-            <td>{bidrem3}</td>
-            <td>{bidno3}</td>
+            <td className="bidho">{bidho3}</td>
+            <td className="bid">{bidrem3}</td>
+            <td className="bid">{bidno3}</td>
           </tr>
           <tr>
             <td></td>
             <td></td>
-            <td>{bidho4}</td>
-            <td>{bidrem4}</td>
-            <td>{bidno4}</td>
+            <td className="bidho">{bidho4}</td>
+            <td className="bid">{bidrem4}</td>
+            <td className="bid">{bidno4}</td>
           </tr>
           <tr>
             <td></td>
             <td></td>
-            <td>{bidho5}</td>
-            <td>{bidrem5}</td>
-            <td>{bidno5}</td>
+            <td className="bidho">{bidho5}</td>
+            <td className="bid">{bidrem5}</td>
+            <td className="bid">{bidno5}</td>
           </tr>
-          <tr>
+          <tr className="bottom">
             <td>{totoffercnt}</td>
             <td>{totofferrem}</td>
             <td>80</td>

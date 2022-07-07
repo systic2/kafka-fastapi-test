@@ -36,3 +36,48 @@
     transform: rotate(360deg);
   }
 }
+
+table {
+  width: 42%;
+  border: 1px solid #282c34;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #282c34;
+  padding: 5px;
+  text-align: center;
+  width: 40px;
+  height: 15px;
+}
+
+caption {
+  text-align: center;
+  padding-bottom: 5px;
+  font-size: large;
+}
+
+.offer {
+  background-color: #e3f2fd;
+}
+
+.offerho {
+  background-color: #e3f2fd;
+  color: blue;
+}
+
+.bid {
+  background-color: #FEDEDF;
+}
+
+.bidho {
+  background-color: #FEDEDF;
+  color: blue;
+}
+
+.top {
+  background-color: #F9FAFC;
+}
+
+.bottom {
+  background-color: #EFEFEF;
+}
