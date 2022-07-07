@@ -518,7 +518,9 @@ class DataManager:  # DataManager 클래스
 
     def process_message(self, price: Price):  # message를 받아서 Price 클래스 형태로 반환
         if price.symbol not in self.prices:  # prices 안에 symbol가 없으면
-            self.prices[price.symbol] = Price(**price.dict())  #
+            self.prices[price.symbol] = Price(**price.dict())
+        else:
+            self.prices[price.symbol] = price
 
         price = self.prices[price.symbol]  # price에 prices 딕셔너리의 Price 클래스를 저장
         return price

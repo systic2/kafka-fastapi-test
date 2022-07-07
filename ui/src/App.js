@@ -60,56 +60,11 @@ export default class App extends Component {
 
   // 업데이트 시 실행되는 구문
   componentDidUpdate(prevProps,prevState) {
-    console.log("갱신될때 실행")
-    console.log(prevState.prices)
-    console.log(this.state.prices)
     if (this.state.prices !== prevState.prices) {
-      console.log("값 비교해서 다르면 실행")
       this.setState(this.state)
-      console.log("setState 실행")
     }
   }
 }
-
-// const Game = (props) => {
-//   var home_team = "Unknown"
-//   var away_team = "Unknown"
-//   if (props.game.home_team) {
-//     home_team = props.game.home_team.name
-//   }
-//   if (props.game.away_team) {
-//     away_team = props.game.away_team.name
-//   }
-//
-//   const home_goals = props.game.goals.reduce(function(amount, goal) {
-//     if (goal.team_id === props.game.home_team.id){
-//       amount += 1;
-//     }
-//     return amount
-//   }, 0)
-//
-//   const away_goals = props.game.goals.reduce(function(amount, goal) {
-//     if (goal.team_id === props.game.away_team.id){
-//       amount += 1;
-//     }
-//     return amount
-//   }, 0)
-//
-//   return <div style={{margin: 10}}>
-//     {home_team} - {away_team}: {home_goals}-{away_goals}
-//     <br/>
-//     <div style={{paddingLeft: 10, fontSize: 12}}>
-//     {props.game.goals.map((item) =>
-//       <div key={item.minute.toString()+item.player.id}>Goal: {item.player.name} - {item.minute}'</div>)}
-//     {props.game.yellow_cards.map((item) =>
-//       <div key={item.minute.toString()+item.player.id}>Yellow: {item.player.name} - {item.minute}'</div>)}
-//     {props.game.second_yellows.map((item) =>
-//       <div key={item.minute.toString()+item.player.id}>Second yellow: {item.player.name} - {item.minute}'</div>)}
-//     {props.game.red_cards.map((item) =>
-//       <div key={item.minute.toString()+item.player.id}>Red: {item.player.name} - {item.minute}'</div>)}
-//     </div>
-//   </div>
-// }
 
 const Price = (props) => {
   var type = 0
