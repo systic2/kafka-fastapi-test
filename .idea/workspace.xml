@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c71b1e9c-7cf2-4f1d-aafc-bbb994cc53d3" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2BT9t7hjNTSdLrDqbOSVpvWgSEp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\kafka-fastapi" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.api">
+    <configuration name="api (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="kafka-fastapi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/producers" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/producers/api.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="kafka-fastapi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api_service" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api_service/api.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.api" />
+        <item itemvalue="Python.api (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c71b1e9c-7cf2-4f1d-aafc-bbb994cc53d3" name="Default Changelist" comment="" />
+      <created>1656919419986</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1656919419986</updated>
+      <workItem from="1656919433066" duration="7044000" />
+      <workItem from="1656986633017" duration="2212000" />
+      <workItem from="1656994713610" duration="2295000" />
+      <workItem from="1657002127811" duration="2013000" />
+      <workItem from="1657059108619" duration="29342000" />
+      <workItem from="1657146295370" duration="8125000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="532" y="558" key="#Notifications" timestamp="1657073772481">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state x="532" y="558" key="#Notifications/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657073772481" />
+    <state x="427" y="437" key="FileChooserDialogImpl" timestamp="1657155286561">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state x="427" y="437" key="FileChooserDialogImpl/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657155286561" />
+    <state x="518" y="593" key="Github.ShareDialog" timestamp="1656992936568">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state x="518" y="593" key="Github.ShareDialog/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1656992936568" />
+    <state x="502" y="400" key="Github.UntrackedFilesDialog" timestamp="1656992966352">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state x="502" y="400" key="Github.UntrackedFilesDialog/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1656992966352" />
+    <state width="1234" height="395" key="GridCell.Tab.0.bottom" timestamp="1657153613190">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state width="1234" height="395" key="GridCell.Tab.0.bottom/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657153613190" />
+    <state width="1234" height="395" key="GridCell.Tab.0.center" timestamp="1657153613190">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state width="1234" height="395" key="GridCell.Tab.0.center/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657153613190" />
+    <state width="1234" height="395" key="GridCell.Tab.0.left" timestamp="1657153613190">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state width="1234" height="395" key="GridCell.Tab.0.left/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657153613190" />
+    <state width="1234" height="395" key="GridCell.Tab.0.right" timestamp="1657153613190">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state width="1234" height="395" key="GridCell.Tab.0.right/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657153613190" />
+    <state x="148" y="340" key="SettingsEditor" timestamp="1656920544100">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state x="148" y="340" key="SettingsEditor/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1656920544100" />
+    <state x="239" y="429" key="Vcs.Push.Dialog.v2" timestamp="1656992999628">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state x="239" y="429" key="Vcs.Push.Dialog.v2/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1656992999628" />
+    <state x="355" y="250" width="584" height="891" key="find.popup" timestamp="1657073900234">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state x="355" y="250" width="584" height="891" key="find.popup/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657073900234" />
+    <state x="310" y="317" width="672" height="678" key="search.everywhere.popup" timestamp="1657089437871">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state x="310" y="317" width="672" height="678" key="search.everywhere.popup/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657089437871" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/kafka_fastapi_test$api__1_.coverage" NAME="api (1) Coverage Results" MODIFIED="1657089001966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/producers" />
+    <SUITE FILE_PATH="coverage/kafka_fastapi$api__1_.coverage" NAME="api (1) Coverage Results" MODIFIED="1656986834284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/producers" />
+    <SUITE FILE_PATH="coverage/kafka_fastapi_test$api.coverage" NAME="api Coverage Results" MODIFIED="1657153608557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api_service" />
+    <SUITE FILE_PATH="coverage/kafka_fastapi$api.coverage" NAME="api Coverage Results" MODIFIED="1656986829034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api_service" />
+  </component>
+</project>
