@@ -28,7 +28,7 @@ event_watcher = threading.Thread(target=asyncio.run, args=(kafka_thread.run(sock
 event_watcher.start()  # event_watcher 스타트
 
 
-@app.get("/prices")  # '/games'로 get 요청이 들어오면 실행
+@app.get("/prices")  # '/prices'로 get 요청이 들어오면 실행
 def get_prices():  # 게임 가져오기
     """
     Start processing a game

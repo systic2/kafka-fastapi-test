@@ -2,7 +2,6 @@ import './App.css';
 import React, { Component } from "react"
 
 const ENDPOINT = "localhost:5000";
-const PRODUCER_ENDPOINT = "localhost:5001"
 
  
 export default class App extends Component {
@@ -13,8 +12,6 @@ export default class App extends Component {
         symbol: "HCEIZ22" // set this game as the default
     }
     this.processMessage = this.processMessage.bind(this);
-    this.startPrice = this.startPrice.bind(this);
-    this.onInputChange = this.onInputChange.bind(this);
   }
 
   processMessage(message) {
@@ -50,20 +47,6 @@ export default class App extends Component {
     client.oclose = function(event) {
       console.log("Disconnected")
     }
-  };
-
-  onInputChange(event) {
-    this.setState({ ...this.state, symbol: event.target.value });
-  }
-
-  startPrice() {
-    const url = "http://" + PRODUCER_ENDPOINT + "/prices/" + this.state.symbol
-    const requestOptions = {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' }
-    };
-    fetch(url, requestOptions)
-      .then(response => console.log(response));
   }
 
   render() {
@@ -71,14 +54,20 @@ export default class App extends Component {
       <div style={{marginLeft: 50}}>
         <h1>Live Prices</h1>
         {Object.keys(this.state.prices).map((key) => <Price key={key} price={this.state.prices[key]}/>)}
-        <h2>Admin Panel</h2>
-        <input
-          value={ this.state.symbol }
-          onChange={ this.onInputChange }
-        />
-        <button onClick={this.startPrice}>Start events!</button>
       </div>
     );
+  }
+
+  // 업데이트 시 실행되는 구문
+  componentDidUpdate(prevProps,prevState) {
+    console.log("갱신될때 실행")
+    console.log(prevState.prices)
+    console.log(this.state.prices)
+    if (this.state.prices !== prevState.prices) {
+      console.log("값 비교해서 다르면 실행")
+      this.setState(this.state)
+      console.log("setState 실행")
+    }
   }
 }
 
@@ -126,6 +115,7 @@ const Price = (props) => {
   var type = 0
   var symbol = "Unknown"
   var hotime = "Unknown"
+  var offerho1 = 0.0
   var offerho2 = 0.0
   var offerho3 = 0.0
   var offerho4 = 0.0
@@ -170,7 +160,9 @@ const Price = (props) => {
   if (props.price.hotime) {
     hotime = props.price.hotime
   }
-  const offerho1 = props.price.offerho1
+  if (props.price.offerho1) {
+    offerho1 = props.price.offerho1
+  }
 
   if (props.price.bidho1) {
     bidho1 = props.price.bidho1
@@ -279,88 +271,95 @@ const Price = (props) => {
     <br/>
     <div style={{paddingLeft: 10, fontSize: 12}}>
       <table border="1">
-        <th>건수</th>
-        <th>잔량</th>
-        <th>호가시간</th>
-        <th>건수</th>
-        <th>잔량</th>
-        <tr>
-          <td>{offerno5}</td>
-          <td>{offerrem5}</td>
-          <td>{offerho5}</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>{offerno4}</td>
-          <td>{offerrem4}</td>
-          <td>{offerho4}</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>{offerno3}</td>
-          <td>{offerrem3}</td>
-          <td>{offerho3}</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>{offerno2}</td>
-          <td>{offerrem2}</td>
-          <td>{offerho2}</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>{offerno1}</td>
-          <td>{offerrem1}</td>
-          <td>{offerho1}</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td>{bidho1}</td>
-          <td>{bidrem1}</td>
-          <td>{bidno1}</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td>{bidho2}</td>
-          <td>{bidrem2}</td>
-          <td>{bidno2}</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td>{bidho3}</td>
-          <td>{bidrem3}</td>
-          <td>{bidno3}</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td>{bidho4}</td>
-          <td>{bidrem4}</td>
-          <td>{bidno4}</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td>{bidho5}</td>
-          <td>{bidrem5}</td>
-          <td>{bidno5}</td>
-        </tr>
-        <tr>
-          <td>{totoffercnt}</td>
-          <td>{totofferrem}</td>
-          <td>80</td>
-          <td>{totbidrem}</td>
-          <td>{totbidcnt}</td>
-        </tr>
+        <thead>
+          <tr>
+            <th>건수</th>
+            <th>잔량</th>
+            <th>호가시간</th>
+            <th>건수</th>
+            <th>잔량</th>
+          </tr>
+        </thead>
+        <tbody>
+           <tr>
+            <td>{offerno5}</td>
+            <td>{offerrem5}</td>
+            <td>{offerho5}</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>{offerno4}</td>
+            <td>{offerrem4}</td>
+            <td>{offerho4}</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>{offerno3}</td>
+            <td>{offerrem3}</td>
+            <td>{offerho3}</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>{offerno2}</td>
+            <td>{offerrem2}</td>
+            <td>{offerho2}</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>{offerno1}</td>
+            <td>{offerrem1}</td>
+            <td>{offerho1}</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>{bidho1}</td>
+            <td>{bidrem1}</td>
+            <td>{bidno1}</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>{bidho2}</td>
+            <td>{bidrem2}</td>
+            <td>{bidno2}</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>{bidho3}</td>
+            <td>{bidrem3}</td>
+            <td>{bidno3}</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>{bidho4}</td>
+            <td>{bidrem4}</td>
+            <td>{bidno4}</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>{bidho5}</td>
+            <td>{bidrem5}</td>
+            <td>{bidno5}</td>
+          </tr>
+          <tr>
+            <td>{totoffercnt}</td>
+            <td>{totofferrem}</td>
+            <td>80</td>
+            <td>{totbidrem}</td>
+            <td>{totbidcnt}</td>
+          </tr>
+        </tbody>
+
 
       </table>
     </div>

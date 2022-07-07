@@ -19,7 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c71b1e9c-7cf2-4f1d-aafc-bbb994cc53d3" name="Default Changelist" comment="" />
+    <list default="true" id="c71b1e9c-7cf2-4f1d-aafc-bbb994cc53d3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kafka-fastapi-test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_service/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_service/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ui/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ui/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/App.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,16 +47,21 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -75,15 +92,15 @@
       <method v="2" />
     </configuration>
     <configuration name="api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="kafka-fastapi" />
+      <module name="kafka-fastapi-test" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\systic\AppData\Local\Programs\Python\Python39\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api_service" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -96,10 +113,37 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="api(1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="kafka-fastapi-test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\systic\AppData\Local\Programs\Python\Python39\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/producers" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/producers/api.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.api (1)" />
+      <item itemvalue="Python.api" />
+      <item itemvalue="Python.api(1)" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.api" />
-        <item itemvalue="Python.api (1)" />
+        <item itemvalue="Python.api(1)" />
       </list>
     </recent_temporary>
   </component>
@@ -118,7 +162,9 @@
       <workItem from="1656994713610" duration="2295000" />
       <workItem from="1657002127811" duration="2013000" />
       <workItem from="1657059108619" duration="29342000" />
-      <workItem from="1657146295370" duration="8511000" />
+      <workItem from="1657146295370" duration="9318000" />
+      <workItem from="1657156612437" duration="7052000" />
+      <workItem from="1657168629076" duration="7664000" />
     </task>
     <servers />
   </component>
@@ -138,14 +184,26 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="532" y="558" key="#Notifications" timestamp="1657073772481">
+    <state x="514" y="586" key="#ESLint" timestamp="1657169200601">
       <screen x="0" y="0" width="2560" height="1392" />
     </state>
-    <state x="532" y="558" key="#Notifications/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657073772481" />
-    <state x="427" y="437" key="FileChooserDialogImpl" timestamp="1657155286561">
+    <state x="514" y="586" key="#ESLint/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657169200601" />
+    <state x="532" y="558" key="#Notifications" timestamp="1657159450862">
       <screen x="0" y="0" width="2560" height="1392" />
     </state>
-    <state x="427" y="437" key="FileChooserDialogImpl/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657155286561" />
+    <state x="532" y="558" key="#Notifications/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657159450862" />
+    <state x="353" y="287" key="#api" timestamp="1657157234784">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state x="353" y="287" key="#api/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657157234784" />
+    <state x="101" y="351" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1657157275784">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state x="101" y="351" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657157275784" />
+    <state x="427" y="437" key="FileChooserDialogImpl" timestamp="1657157164151">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state x="427" y="437" key="FileChooserDialogImpl/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657157164151" />
     <state x="518" y="593" key="Github.ShareDialog" timestamp="1657155338386">
       <screen x="0" y="0" width="2560" height="1392" />
     </state>
@@ -154,26 +212,26 @@
       <screen x="0" y="0" width="2560" height="1392" />
     </state>
     <state x="502" y="400" key="Github.UntrackedFilesDialog/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657155360945" />
-    <state width="1234" height="395" key="GridCell.Tab.0.bottom" timestamp="1657155641196">
+    <state width="1234" height="395" key="GridCell.Tab.0.bottom" timestamp="1657176303063">
       <screen x="0" y="0" width="2560" height="1392" />
     </state>
-    <state width="1234" height="395" key="GridCell.Tab.0.bottom/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657155641196" />
-    <state width="1234" height="395" key="GridCell.Tab.0.center" timestamp="1657155641180">
+    <state width="1234" height="395" key="GridCell.Tab.0.bottom/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657176303063" />
+    <state width="1234" height="395" key="GridCell.Tab.0.center" timestamp="1657176303063">
       <screen x="0" y="0" width="2560" height="1392" />
     </state>
-    <state width="1234" height="395" key="GridCell.Tab.0.center/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657155641180" />
-    <state width="1234" height="395" key="GridCell.Tab.0.left" timestamp="1657155641180">
+    <state width="1234" height="395" key="GridCell.Tab.0.center/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657176303063" />
+    <state width="1234" height="395" key="GridCell.Tab.0.left" timestamp="1657176303063">
       <screen x="0" y="0" width="2560" height="1392" />
     </state>
-    <state width="1234" height="395" key="GridCell.Tab.0.left/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657155641180" />
-    <state width="1234" height="395" key="GridCell.Tab.0.right" timestamp="1657155641196">
+    <state width="1234" height="395" key="GridCell.Tab.0.left/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657176303063" />
+    <state width="1234" height="395" key="GridCell.Tab.0.right" timestamp="1657176303063">
       <screen x="0" y="0" width="2560" height="1392" />
     </state>
-    <state width="1234" height="395" key="GridCell.Tab.0.right/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657155641196" />
-    <state x="148" y="340" key="SettingsEditor" timestamp="1656920544100">
+    <state width="1234" height="395" key="GridCell.Tab.0.right/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657176303063" />
+    <state x="148" y="340" key="SettingsEditor" timestamp="1657157029313">
       <screen x="0" y="0" width="2560" height="1392" />
     </state>
-    <state x="148" y="340" key="SettingsEditor/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1656920544100" />
+    <state x="148" y="340" key="SettingsEditor/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657157029313" />
     <state x="239" y="429" key="Vcs.Push.Dialog.v2" timestamp="1657155523224">
       <screen x="0" y="0" width="2560" height="1392" />
     </state>
@@ -186,15 +244,15 @@
       <screen x="0" y="0" width="2560" height="1392" />
     </state>
     <state x="355" y="250" width="584" height="891" key="find.popup/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657073900234" />
-    <state x="310" y="317" width="672" height="678" key="search.everywhere.popup" timestamp="1657089437871">
+    <state x="310" y="317" width="672" height="678" key="search.everywhere.popup" timestamp="1657170119756">
       <screen x="0" y="0" width="2560" height="1392" />
     </state>
-    <state x="310" y="317" width="672" height="678" key="search.everywhere.popup/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657089437871" />
+    <state x="310" y="317" width="672" height="678" key="search.everywhere.popup/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657170119756" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/kafka_fastapi_test$api__1_.coverage" NAME="api (1) Coverage Results" MODIFIED="1657089001966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/producers" />
     <SUITE FILE_PATH="coverage/kafka_fastapi$api__1_.coverage" NAME="api (1) Coverage Results" MODIFIED="1656986834284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/producers" />
-    <SUITE FILE_PATH="coverage/kafka_fastapi_test$api.coverage" NAME="api Coverage Results" MODIFIED="1657155641180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api_service" />
+    <SUITE FILE_PATH="coverage/kafka_fastapi_test$api.coverage" NAME="api Coverage Results" MODIFIED="1657174592281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api_service" />
     <SUITE FILE_PATH="coverage/kafka_fastapi$api.coverage" NAME="api Coverage Results" MODIFIED="1656986829034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api_service" />
   </component>
 </project>
