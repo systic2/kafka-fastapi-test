@@ -1,7 +1,10 @@
 import asyncio
 import json
 import threading
+
 import uvicorn
+import pandas as pd
+
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -9,6 +12,9 @@ from starlette.websockets import WebSocket, WebSocketDisconnect
 
 import api_service.kakfa_thread as kafka_thread
 from api_service.helpers import DataManager, ConnectionManager, PriceEncoder
+
+from api_service.db import session
+from api_service.models import O3101Table, O3101
 
 app = FastAPI()  # FastAPI object 생성
 
@@ -26,6 +32,18 @@ sockets = ConnectionManager()  # helpers.py의 ConnectionManager 클래스 생�
 # asyncio.run 으로 비동기식 프로그래밍을 진행하고 인수로 kafka_thread.py의 run 함수 반환 값들을 event_watcher 에 저장
 event_watcher = threading.Thread(target=asyncio.run, args=(kafka_thread.run(sockets, data),))
 event_watcher.start()  # event_watcher 스타트
+
+
+@app.get("/plists")
+async def read_lists():
+    newPlists = []
+    plists = session.query(O3101Table).all()
+    print(plists)
+    for plist in plists:
+        plist = O3101.dict(plist)
+        newPlists.append(plist)
+    print(newPlists)
+    return newPlists
 
 
 @app.get("/prices")  # '/prices'로 get 요청이 들어오면 실행

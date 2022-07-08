@@ -1,9 +1,8 @@
 import datetime
 import json
-import traceback
 from dataclasses import dataclass, asdict
 from time import sleep
-from typing import List, Dict, Any, Optional
+from typing import List, Dict
 
 from kafka import KafkaConsumer
 from kafka.errors import NoBrokersAvailable
@@ -29,232 +28,6 @@ def connect_consumer():  # 컨슈머 연결
 def parse(message):  # 메시지 구문 분석
     return json.loads(message.value.decode("utf-8"))  # json.loads 함수 호출
 
-
-# class Types:  # 이벤트 타입
-#     SHOT = 16  # 슛
-#     FOUL = 22  # 파울
-#     BAD_BEHAVIOUR = 24  # 비신사적 행동
-#     STARTING_XI = 35  # 스타팅 11
-#     END_HALF = 34  # 경기 종료
-#
-#
-# class Outcomes:  # 결과
-#     GOAL = 97  # 골
-#     FOUL_YELLOW = "Yellow Card"  # The docs are wrong here, so judging based on event name
-#     FOUL_SECOND_YELLOW = "Second Yellow Card"  # 파울로 인한 두 번째 옐로우 카드
-#     FOUL_RED = "Red Card"  # 파울로 인한 레드 카드
-#     BAD_BEHAVIOR_YELLOW = "Yellow Card"  # 비신사적 행동으로 인한 옐로우 카드
-#     BAD_BEHAVIOR_SECOND_YELLOW = "Second Yellow Card"  # 비신사적 행동으로 인한 두 번째 옐로우 카드
-#     BAD_BEHAVIOR_RED = "Red Card"  # 비신사적 행동으로 인한 레드 카드
-
-
-# @dataclass  # 데이터 정의
-# class Message(object):  # Message 데이터클래스
-#     game_id: str
-#     event: Dict[str, Any]
-
-
-# @dataclass  # 데이터 정의
-# class Player(object):  # Player 데이터클래스
-#     id: int
-#     name: str
-#
-#     def encode(self):  # 메서드
-#         return {
-#             "id": self.id,
-#             "name": self.id
-#         }
-#
-#
-# @dataclass  # 데이터 정의
-# class YellowCard(object):  # YellowCard 데이터클래스
-#     player: Player
-#     minute: int
-#     team_id: int
-#
-#     @classmethod  # 클래스 메서드
-#     def from_event(cls, event):
-#         return YellowCard(
-#             player=Player(**event["player"]),
-#             minute=event["minute"],
-#             team_id=event["team"]["id"],
-#         )
-#
-#
-# @dataclass  # 데이터 정의
-# class SecondYellow(object):  # SecondYellow 데이터클래스
-#     player: Player
-#     minute: int
-#     team_id: int
-#
-#     @classmethod  # 클래스 메서드
-#     def from_event(cls, event):
-#         return SecondYellow(
-#             player=Player(**event["player"]),
-#             minute=event["minute"],
-#             team_id=event["team"]["id"],
-#         )
-#
-#
-# @dataclass  # 데이터 정의
-# class RedCard(object):  # RedCard 데이터클래스
-#     player: Player
-#     minute: int
-#     team_id: int
-#
-#     @classmethod  # 클래스 메서드
-#     def from_event(cls, event):
-#         return RedCard(
-#             player=Player(**event["player"]),
-#             minute=event["minute"],
-#             team_id=event["team"]["id"],
-#         )
-#
-#
-# @dataclass  # 데이터 정의
-# class Goal(object):  # Goal 데이터클래스
-#     team_id: int
-#     player: Player
-#     minute: int
-#
-#     @classmethod  # 클래스 메서드
-#     def from_event(cls, event):
-#         return Goal(
-#             team_id=event["team"]["id"],
-#             player=Player(**event["player"]),
-#             minute=event["minute"],
-#         )
-#
-#
-# @dataclass  # 데이터 정의
-# class Team(object):  # Team 데이터클래스
-#     id: int
-#     name: str
-#
-#
-# @dataclass  # 데이터 정의
-# class Game:  # Game 데이터클래스
-#     game_id: str
-#     yellow_cards: List[YellowCard]
-#     red_cards: List[RedCard]
-#     second_yellows: List[SecondYellow]
-#     goals: List[Goal]
-#     home_team: Optional[Team]
-#     away_team: Optional[Team]
-#     events: List[str]
-#
-#     def __init__(self, game_id):  # 생성자
-#         self.game_id = game_id
-#         self.yellow_cards = []
-#         self.red_cards = []
-#         self.second_yellows = []
-#         self.goals = []
-#         self.home_team = None
-#         self.away_team = None
-#         self.events = []
-#
-#     def dict(self):  # 딕셔너리 형태로 반환
-#         return {
-#             "yellow_cards": self.yellow_cards,
-#             "red_cards": self.red_cards,
-#             "second_yellow": self.yellow_cards,
-#             "goals": self.goals,
-#             "home_team": self.home_team,
-#             "away_team": self.away_team
-#         }
-#
-#     def apply(self, event) -> bool:  # event를 받아서 bool 형태로 반환
-#         """
-#         Apply the event and return whether something happened
-#         :param event:
-#         :return:
-#         """
-#         if event["id"] in self.events:  # event['id'] 가 events 안에 있으면 False 반환
-#             return False
-#         try:
-#             self.events.append(event["id"])  # game 클래스 events 속성에 event['id'] 값을 추가
-#             if self.__is_starting_XI(event):  # 스타팅 11이면 실행
-#                 print("Starting XI event")
-#                 team = Team(**event["team"])  # Team 클래스에 event['team'] 딕셔너리를 받아서 team 변수에 저장
-#                 if event["index"] == 1:  # event['index'] 가 1이면 team을 home_team에 저장
-#                     self.home_team = team
-#                 elif event["index"] == 2:  # event['index'] 가 1이면 team을 away_team에 저장
-#                     self.away_team = team
-#             elif self.__is_goal(event):  # 골이면 실행
-#                 print("Goal event")
-#                 goal = Goal.from_event(event)  # event변수를 받아서 Goal 클래스 from_event 함수 호출
-#                 self.goals.append(goal)  # Game 클래스 goals에 goal 추가
-#             elif self.__is_yellow(event):  # 옐로우면 실행
-#                 print("Yellow card event")
-#                 yellow = YellowCard.from_event(event)  # event변수를 받아서 YellowCard 클래스 from_event 함수 호출
-#                 self.yellow_cards.append(yellow)  # Game 클래스 yellow_cards에 추가
-#             elif self.__is_red(event):  # 레드면 실행
-#                 print("Red card event")
-#                 red = RedCard.from_event(event)  # event 변수를 받아서 RedCard 클래스 from_event 함수 호출
-#                 self.red_cards.append(red)  # Game 클래스 red_cards에 추가
-#             elif self.__is_second_yellow(event):  # 두 번째 옐로우면 실행
-#                 print("Second yellow card event")
-#                 sy = SecondYellow.from_event(event)  # SecondYellow 클래스 from_event 함수 호출
-#                 self.second_yellows.append(sy)  # Game 클래스 second_yellows 에 추가
-#             else:   # 제외인 경우
-#                 t = event["type"]["id"]  # t 변수에 event['type']['id']를 저장 후 False 반환
-#                 return False
-#             return True  # True를 반환
-#         except KeyError as e:  # 예외 처리
-#             print("could not process event")
-#             print(event)
-#             print(traceback.format_exc())
-#
-#     @staticmethod  #
-#     def __is_goal(event):
-#         return event["type"]["id"] == Types.SHOT \
-#                and event["shot"]["outcome"]["id"] == Outcomes.GOAL
-#
-#     @staticmethod
-#     def __is_yellow(event):
-#         if "foul_committed" in event:
-#             return (
-#                     event["type"]["id"] == Types.FOUL and
-#                     event["foul_committed"].get("card", {}).get("name", "DUMMY") == Outcomes.FOUL_YELLOW
-#             )
-#         if "bad_behaviour" in event:
-#             return (
-#                     event["type"]["id"] == Types.BAD_BEHAVIOUR and
-#                     event["bad_behaviour"].get("card", {}).get("name", "DUMMY") == Outcomes.BAD_BEHAVIOR_YELLOW
-#             )
-#         return False
-#
-#     @staticmethod
-#     def __is_second_yellow(event):
-#         if "foul_committed" in event:
-#             return (
-#                     event["type"]["id"] == Types.FOUL and
-#                     event["foul_committed"].get("card", {}).get("name", "DUMMY") == Outcomes.FOUL_SECOND_YELLOW
-#             )
-#         if "bad_behaviour" in event:
-#             return (
-#                     event["type"]["id"] == Types.BAD_BEHAVIOUR and
-#                     event["bad_behaviour"].get("card", {}).get("name", "DUMMY") == Outcomes.BAD_BEHAVIOR_SECOND_YELLOW
-#             )
-#         return False
-#
-#     @staticmethod
-#     def __is_red(event):
-#         if "foul_committed" in event:
-#             return (
-#                     event["type"]["id"] == Types.FOUL and
-#                     event["foul_committed"].get("card", {}).get("name", "DUMMY") == Outcomes.FOUL_RED
-#             )
-#         if "bad_behaviour" in event:
-#             return (
-#                     event["type"]["id"] == Types.BAD_BEHAVIOUR and
-#                     event["bad_behaviour"].get("card", {}).get("name", "DUMMY") == Outcomes.BAD_BEHAVIOR_RED
-#             )
-#         return False
-#
-#     @staticmethod
-#     def __is_starting_XI(event):
-#         return event["type"]["id"] == Types.STARTING_XI
 
 @dataclass  # 데이터 정의
 class Message(object):  # Message 데이터클래스
@@ -328,7 +101,7 @@ class Totbidho(object):
     totbidrem: int
 
 
-@dataclass(init=True)  # 데이터 정의
+@dataclass(init=True)  # 데이터 정의(생성자 포함)
 class Price:  # Price(실시간 호가창) 데이터클래스
     type: int           # 데이터 구분
     symbol: str         # 종목 구분
@@ -373,51 +146,6 @@ class Price:  # Price(실시간 호가창) 데이터클래스
     totbidcnt: int      # 매수호가총건수
     totofferrem: int    # 매도호가총잔량
     totbidrem: int      # 매수호가총잔량
-
-    # def __init__(self):  # 생성자(값 초기화)
-    #     self.type = 0
-    #     self.symbol = ''
-    #     self.hotime = ''
-    #
-    #     self.offerho1 = 0.0
-    #     self.bidho1 = 0.0
-    #     self.offerrem1 = 0
-    #     self.bidrem1 = 0
-    #     self.offerno1 = 0
-    #     self.bidno1 = 0
-    #
-    #     self.offerho2 = 0.0
-    #     self.bidho2 = 0.0
-    #     self.offerrem2 = 0
-    #     self.bidrem2 = 0
-    #     self.offerno2 = 0
-    #     self.bidno2 = 0
-    #
-    #     self.offerho3 = 0.0
-    #     self.bidho3 = 0.0
-    #     self.offerrem3 = 0
-    #     self.bidrem3 = 0
-    #     self.offerno3 = 0
-    #     self.bidno3 = 0
-    #
-    #     self.offerho4 = 0.0
-    #     self.bidho4 = 0.0
-    #     self.offerrem4 = 0
-    #     self.bidrem4 = 0
-    #     self.offerno4 = 0
-    #     self.bidno4 = 0
-    #
-    #     self.offerho5 = 0.0
-    #     self.bidho5 = 0.0
-    #     self.offerrem5 = 0
-    #     self.bidrem5 = 0
-    #     self.offerno5 = 0
-    #     self.bidno5 = 0
-    #
-    #     self.totoffercnt = 0
-    #     self.totbidcnt = 0
-    #     self.totofferrem = 0
-    #     self.totbidrem = 0
 
     def dict(self):  # 딕셔너리 형태로 반환
         return {
@@ -479,44 +207,10 @@ class Price:  # Price(실시간 호가창) 데이터클래스
             return True
 
 
-# @dataclass  # 데이터 정의
-# class Contract(object):  # Contract(체결 정보) 데이터클래스
-#     symbol: str     # 종목 구문
-#     kortm: str      # 체결 시간 표시
-#     curpr: float    # 체결 가격 표시
-#     trdq: int       # 건별 체결 수량 표시
-#     cgubun: str     # 체결 구분 표시 (색깔로 빨강 파랑)
-
-
-# class DataManager:  # DataManager 클래스
-#     games: Dict[str, Game] = {}  # games = { 'key': Game object }
-#
-#     def process_message(self, message: Message) -> Game:  # message를 받아서 Game 클래스 형태로 반환
-#         if message.game_id not in self.games:  # games 안에 game_id가 없으면
-#             self.games[message.game_id] = Game(message.game_id)  # message.game_id와 일치하는 Game클래스를
-#             # games[message.game_id]로 저장
-#
-#         game = self.games[message.game_id]  # game 안에 games 딕셔너리의 Game 클래스를 저장
-#         updated = game.apply(message.event)  # updated 변수에 game.apply(message.event)함수 호출 반환
-#
-#         if self.is_end_match(message.event):  # is_end_match()가 참이면 games의 Game 클래스를 삭제
-#             del self.games[message.game_id]
-#
-#         if updated:  # updated 가 참이면 game을 반환
-#             return game
-#
-#     @staticmethod
-#     def is_end_match(event):  # event를 받아서 bool 값으로 반환
-#         return (
-#                 event["type"]["id"] == Types.END_HALF and
-#                 event["period"] == 2  # event['type']['id]가 Types.END_HALF(34) 이고 event['period']가 2이면
-#         )
-
-
 class DataManager:  # DataManager 클래스
     prices: Dict[str, Price] = {}  # prices = { 'key': Price object }
 
-    def process_message(self, price: Price):  # message를 받아서 Price 클래스 형태로 반환
+    def process_message(self, price: Price):  # 메시지 출력
         if price.symbol not in self.prices:  # prices 안에 symbol가 없으면
             self.prices[price.symbol] = Price(**price.dict())
         else:
@@ -544,12 +238,6 @@ class ConnectionManager:
         for connection in self.active_connections:  # active_connections 에서 connection을 꺼내옴
             await connection.send_text(message)  # 메시지 전송 대기
 
-
-# class GameEncoder(json.JSONEncoder):  # JSONEncoder 확장
-#     def default(self, o):
-#         if type(o) in [Game, Team, Player, YellowCard, RedCard]:  # 해당 List 안에 입력한 object 타입이 있다면
-#             return asdict(o)  # 딕셔너리 형태로 반환
-#         return super().default(o)  # JSON default 함수로 반환
 
 class PriceEncoder(json.JSONEncoder):  # JSONEncoder 확장
     def default(self, o):
