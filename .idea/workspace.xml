@@ -16,16 +16,50 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c71b1e9c-7cf2-4f1d-aafc-bbb994cc53d3" name="Default Changelist" comment="commit-3(22/07/07 실시간 갱신 확인)">
-      <change afterPath="$PROJECT_DIR$/api_service/db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_service/models.py" afterDir="false" />
+    <list default="true" id="c71b1e9c-7cf2-4f1d-aafc-bbb994cc53d3" name="Default Changelist" comment="commit-3(22/07/07)-실시간 갱신 확인">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_service/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_service/api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_service/helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_service/helpers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_service/kakfa_thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_service/kakfa_thread.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_service/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_service/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/producers/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/producers/api.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/producers/data/events/7298.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/producers/data/events/7430.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/producers/data/events/7443.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/producers/data/events/7444.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/producers/data/events/7445.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/producers/data/events/7451.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/producers/data/events/7456.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/producers/data/events/7457.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/producers/data/events/7471.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/producers/data/events/7472.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/producers/data/events/7473.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/producers/data/events/7474.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/producers/data/events/7475.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/producers/data/events/7476.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/producers/data/events/7477.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/producers/football_data_producer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/producers/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/.dockerignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/public/logo512.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/setupTests.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,11 +70,24 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="2adb21e26a6ba9362c18a621cdff4f10fd345551" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/systic2/kafka-fastapi-test.git" />
+      </set>
+    </option>
   </component>
   <component name="ProjectId" id="2BT9t7hjNTSdLrDqbOSVpvWgSEp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -67,6 +114,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\kafka-fastapi-test\ui\src" />
       <recent name="D:\kafka-fastapi" />
     </key>
   </component>
@@ -146,6 +194,9 @@
       <list>
         <item itemvalue="Python.api" />
         <item itemvalue="Python.api(1)" />
+        <item itemvalue="Python.api (1)" />
+        <item itemvalue="Python.api(1)" />
+        <item itemvalue="Python.api" />
       </list>
     </recent_temporary>
   </component>
@@ -168,6 +219,7 @@
       <workItem from="1657156612437" duration="7052000" />
       <workItem from="1657168629076" duration="14234000" />
       <workItem from="1657230741310" duration="29357000" />
+      <workItem from="1657579458341" duration="20863000" />
     </task>
     <task id="LOCAL-00001" summary="commit-2(22/07/07)">
       <created>1657176381158</created>
@@ -201,7 +253,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -210,7 +274,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit-2(22/07/07)" />
-    <MESSAGE value="commit-3(22/07/07 실시간 갱신 확인)" />
+    <MESSAGE value="commit-3(22/07/07)-실시간 갱신 확인" />
     <MESSAGE value="commit(22/07/08)-호가창 css 작업" />
     <option name="LAST_COMMIT_MESSAGE" value="commit(22/07/08)-호가창 css 작업" />
   </component>
@@ -231,10 +295,18 @@
       <screen x="0" y="0" width="2560" height="1392" />
     </state>
     <state x="101" y="351" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657247607998" />
-    <state x="427" y="437" key="FileChooserDialogImpl" timestamp="1657269115351">
+    <state x="377" y="442" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1657588997121">
       <screen x="0" y="0" width="2560" height="1392" />
     </state>
-    <state x="427" y="437" key="FileChooserDialogImpl/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657269115351" />
+    <state x="377" y="442" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657588997121" />
+    <state x="427" y="437" key="FileChooserDialogImpl" timestamp="1657613041619">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state x="427" y="437" key="FileChooserDialogImpl/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657613041619" />
+    <state x="475" y="595" key="GitRewordDialog" timestamp="1657581242633">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state x="475" y="595" key="GitRewordDialog/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657581242633" />
     <state x="518" y="593" key="Github.ShareDialog" timestamp="1657155338386">
       <screen x="0" y="0" width="2560" height="1392" />
     </state>
@@ -243,30 +315,38 @@
       <screen x="0" y="0" width="2560" height="1392" />
     </state>
     <state x="502" y="400" key="Github.UntrackedFilesDialog/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657155360945" />
-    <state width="1234" height="395" key="GridCell.Tab.0.bottom" timestamp="1657267089802">
+    <state width="1234" height="394" key="GridCell.Tab.0.bottom" timestamp="1657668858274">
       <screen x="0" y="0" width="2560" height="1392" />
     </state>
-    <state width="1234" height="395" key="GridCell.Tab.0.bottom/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657267089802" />
-    <state width="1234" height="395" key="GridCell.Tab.0.center" timestamp="1657267089802">
+    <state width="1234" height="394" key="GridCell.Tab.0.bottom/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657668858274" />
+    <state width="1234" height="394" key="GridCell.Tab.0.center" timestamp="1657668858274">
       <screen x="0" y="0" width="2560" height="1392" />
     </state>
-    <state width="1234" height="395" key="GridCell.Tab.0.center/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657267089802" />
-    <state width="1234" height="395" key="GridCell.Tab.0.left" timestamp="1657267089802">
+    <state width="1234" height="394" key="GridCell.Tab.0.center/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657668858274" />
+    <state width="1234" height="394" key="GridCell.Tab.0.left" timestamp="1657668858274">
       <screen x="0" y="0" width="2560" height="1392" />
     </state>
-    <state width="1234" height="395" key="GridCell.Tab.0.left/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657267089802" />
-    <state width="1234" height="395" key="GridCell.Tab.0.right" timestamp="1657267089802">
+    <state width="1234" height="394" key="GridCell.Tab.0.left/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657668858274" />
+    <state width="1234" height="394" key="GridCell.Tab.0.right" timestamp="1657668858274">
       <screen x="0" y="0" width="2560" height="1392" />
     </state>
-    <state width="1234" height="395" key="GridCell.Tab.0.right/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657267089802" />
+    <state width="1234" height="394" key="GridCell.Tab.0.right/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657668858274" />
     <state x="148" y="340" key="SettingsEditor" timestamp="1657157029313">
       <screen x="0" y="0" width="2560" height="1392" />
     </state>
     <state x="148" y="340" key="SettingsEditor/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657157029313" />
+    <state x="494" y="609" key="VCS.ChangelistChooser" timestamp="1657581436750">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state x="494" y="609" key="VCS.ChangelistChooser/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657581436750" />
     <state x="239" y="429" key="Vcs.Push.Dialog.v2" timestamp="1657238139765">
       <screen x="0" y="0" width="2560" height="1392" />
     </state>
     <state x="239" y="429" key="Vcs.Push.Dialog.v2/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657238139765" />
+    <state x="100" y="100" width="1094" height="1192" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1657663878779">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state x="100" y="100" width="1094" height="1192" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657663878779" />
     <state x="452" y="609" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1657155491672">
       <screen x="0" y="0" width="2560" height="1392" />
     </state>
@@ -275,15 +355,19 @@
       <screen x="0" y="0" width="2560" height="1392" />
     </state>
     <state x="355" y="250" width="584" height="891" key="find.popup/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657073900234" />
-    <state x="310" y="317" width="672" height="678" key="search.everywhere.popup" timestamp="1657170119756">
+    <state x="445" y="483" key="git4idea.merge.GitMergeDialog" timestamp="1657662656414">
       <screen x="0" y="0" width="2560" height="1392" />
     </state>
-    <state x="310" y="317" width="672" height="678" key="search.everywhere.popup/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657170119756" />
+    <state x="445" y="483" key="git4idea.merge.GitMergeDialog/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657662656414" />
+    <state x="310" y="317" width="672" height="678" key="search.everywhere.popup" timestamp="1657590084045">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state x="310" y="317" width="672" height="678" key="search.everywhere.popup/0.0.2560.1392/-2560.0.2560.1392@0.0.2560.1392" timestamp="1657590084045" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/kafka_fastapi_test$api__1_.coverage" NAME="api (1) Coverage Results" MODIFIED="1657089001966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/producers" />
     <SUITE FILE_PATH="coverage/kafka_fastapi$api__1_.coverage" NAME="api (1) Coverage Results" MODIFIED="1656986834284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/producers" />
-    <SUITE FILE_PATH="coverage/kafka_fastapi_test$api.coverage" NAME="api Coverage Results" MODIFIED="1657267089802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api_service" />
+    <SUITE FILE_PATH="coverage/kafka_fastapi_test$api.coverage" NAME="api Coverage Results" MODIFIED="1657668858264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api_service" />
     <SUITE FILE_PATH="coverage/kafka_fastapi$api.coverage" NAME="api Coverage Results" MODIFIED="1656986829034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api_service" />
   </component>
 </project>

@@ -3,13 +3,12 @@ import React, { Component } from "react"
 
 const ENDPOINT = "172.30.1.7:5000"; // 웹 서비스 주소 설정
 
- 
+let current_symbol = "SCNN22"
 export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
         prices: {},
-        plists: {},
         symbol: "HCEIZ22" // set this game as the default
     }
     this.processMessage = this.processMessage.bind(this);
@@ -17,13 +16,15 @@ export default class App extends Component {
 
   processMessage(message) {
       message = JSON.parse(message.data)
-      const symbol = message.symbol
-      const newState = {...this.state, prices: {...this.state.prices, [symbol]: message}}
+    if(message.symbol === current_symbol) {
+      const symbol = current_symbol
+      const newState = {...this.state, prices: {[symbol]: message}}
       this.setState(newState)
+    }
   }
 
   componentDidMount() {
-    fetch("http://" + ENDPOINT + "/prices") // 호가창 연결
+    fetch("http://" + ENDPOINT + "/prices/" + current_symbol) // 호가창 연결
       .then(response => response.json())
       .then(data => {
         data = JSON.parse(data)
@@ -31,21 +32,6 @@ export default class App extends Component {
           map[obj.symbol] = obj; return map;
         }, {})
         this.setState({...this.state, prices: result})
-      })
-
-    fetch("http://" + ENDPOINT + "/plists") // 데이터 베이스 연결 추가
-      .then(response => {
-        console.log(response)
-        response.json()
-      })
-      .then(data => {
-        console.log(data)
-        data = JSON.parse(data)
-        console.log(data)
-        const result = data.reduce(function(map, obj) {
-          map[obj.SymbolNm] = obj; return map;
-        }, [])
-        this.setState({...this.state, plists: result})
       })
 
     const client = new WebSocket("ws://" + ENDPOINT + "/ws")
@@ -70,154 +56,10 @@ export default class App extends Component {
       <div style={{marginLeft: 50}}>
         <h1>Live Prices</h1>
         {Object.keys(this.state.prices).map((key) => <Price key={key} price={this.state.prices[key]}/>)}
-        {Object.keys(this.state.plists).map((key) => <Plist key={key} plist={this.state.plists[key]}/>)}
       </div>
     );
   }
 }
-
-const Plist = (props) => {
-  let no = 0
-  let Symbol = ''
-  let SymbolNm = ''
-  let ApplDate = ''
-  let BscGdsCd = ''
-  let BscGdsNm = ''
-  let ExchCd = ''
-  let ExchNm = ''
-  let CrncyCd = ''
-  let NotaCd = ''
-  let UntPrc = 0.0
-  let MnChgAmt = 0.0
-  let RgltFctr = 0.0
-  let CtrtPrAmt = 0.0
-  let GdsCd = ''
-  let LstngYr = ''
-  let LstngM = ''
-  let EcPrc = 0.0
-  let DlStrtTm = ''
-  let DlEndTm = ''
-  let DlPsbCd = ''
-  let MgnCltCd = ''
-  let OpngMgn = 0.0
-  let MntncMgn = 0.0
-  let OpngMgnR = 0.0
-  let MntncMgnR = 0.0
-  let DotGb = ''
-
-  if (props.plists.no) {
-    no = props.plists.no
-  }
-  if (props.plists.Symbol) {
-    Symbol = props.plists.Symbol
-  }
-  if (props.plists.SymbolNm) {
-    SymbolNm = props.plists.SymbolNm
-  }
-  if (props.plists.ApplDate) {
-    ApplDate = props.plists.ApplDate
-  }
-  if (props.plists.BscGdsCd) {
-    BscGdsCd = props.plists.BscGdsCd
-  }
-  if (props.plists.BscGdsNm) {
-    BscGdsNm = props.plists.BscGdsNm
-  }
-  if (props.plists.ExchCd) {
-    ExchCd = props.plists.ExchCd
-  }
-  if (props.plists.ExchNm) {
-    ExchNm = props.plists.ExchNm
-  }
-  if (props.plists.CrncyCd) {
-    CrncyCd = props.plists.CrncyCd
-  }
-  if (props.plists.NotaCd) {
-    NotaCd = props.plists.NotaCd
-  }
-  if (props.plists.UntPrc) {
-    UntPrc = props.plists.UntPrc
-  }
-  if (props.plists.MnChgAmt) {
-    MnChgAmt = props.plists.MnChgAmt
-  }
-  if (props.plists.RgltFctr) {
-    RgltFctr = props.plists.RgltFctr
-  }
-  if (props.plists.CtrtPrAmt) {
-    CtrtPrAmt = props.plists.CtrtPrAmt
-  }
-  if (props.plists.GdsCd) {
-    GdsCd = props.plists.GdsCd
-  }
-  if (props.plists.LstngYr) {
-    LstngYr = props.plists.LstngYr
-  }
-  if (props.plists.LstngM) {
-    LstngM = props.plists.LstngM
-  }
-  if (props.plists.EcPrc) {
-    EcPrc = props.plists.EcPrc
-  }
-  if (props.plists.DlStrtTm) {
-    DlStrtTm = props.plists.DlStrtTm
-  }
-  if (props.plists.DlEndTm) {
-    DlEndTm = props.plists.DlEndTm
-  }
-  if (props.plists.DlPsbCd) {
-    DlPsbCd = props.plists.DlPsbCd
-  }
-  if (props.plists.MgnCltCd) {
-    MgnCltCd = props.plists.MgnCltCd
-  }
-  if (props.plists.OpngMgn) {
-    OpngMgn = props.plists.OpngMgn
-  }
-  if (props.plists.MntncMgn) {
-    MntncMgn = props.plists.MntncMgn
-  }
-  if (props.plists.OpngMgnR) {
-    OpngMgnR = props.plists.OpngMgnR
-  }
-  if (props.plists.MntncMgnR) {
-    MntncMgnR = props.plists.MntncMgnR
-  }
-  if (props.plists.DotGb) {
-    DotGb = props.plists.DotGb
-  }
-
-  return <div style={{margin: 10}}>
-
-    <div style={{paddingLeft: 10, fontSize: 12}}>
-
-      <table border="1">
-        <caption>목록</caption>
-        <thead>
-          <tr className="top">
-            <th>종목</th>
-            <th>코드</th>
-            <th>월물</th>
-            <th>현재가</th>
-            <th>전일대비</th>
-          </tr>
-        </thead>
-        <tbody>
-           <tr>
-            <td>{SymbolNm}</td>
-            <td>{Symbol}</td>
-            <td>{LstngYr}({LstngM})</td>
-            <td>{CtrtPrAmt}</td>
-            <td>{EcPrc}</td>
-          </tr>
-        </tbody>
-
-
-      </table>
-    </div>
-  </div>
-}
-
 
 const Price = (props) => {
   var type = 0

@@ -6,7 +6,7 @@ from kafka.errors import NoBrokersAvailable
 
 from api_service.helpers import ConnectionManager, DataManager, Price, PriceEncoder
 
-KAFKA_URL = "172.30.1.37:9092"  # kafka 주소
+KAFKA_URL = "172.30.1.15:9092"  # kafka 주소
 
 
 # async 는 멀티태스킹을 위한 비동기 프로그래밍
@@ -18,6 +18,7 @@ async def run(sockets: ConnectionManager, data: DataManager):  # sockets, data �
         # updated_price 에 저장
         if updated_price:  # 참이면 실행
             await sockets.broadcast(json.dumps(updated_price, cls=PriceEncoder))  # broadcast() 함수 대기
+            sleep(0.05)
     print("Kafka thread ended")
 
 
@@ -28,6 +29,7 @@ def connect_consumer():
             consumer = KafkaConsumer(  # kafka 컨슈머 생성
                 "futhres-test",  # topic 이름
                 bootstrap_servers=KAFKA_URL,  # kafka 주소 정보 입력
+                auto_offset_reset='earliest'
             )
             print("Kafka consumer initiated")
             break  # 무한루프 탈출

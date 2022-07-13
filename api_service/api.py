@@ -34,26 +34,29 @@ event_watcher = threading.Thread(target=asyncio.run, args=(kafka_thread.run(sock
 event_watcher.start()  # event_watcher 스타트
 
 
-@app.get("/plists")
-async def read_lists():
-    newPlists = []
-    plists = session.query(O3101Table).all()
-    print(plists)
-    for plist in plists:
-        plist = O3101.dict(plist)
-        newPlists.append(plist)
-    print(newPlists)
-    return newPlists
+# @app.get("/plists")
+# async def read_lists():
+#     newPlists = []
+#     plists = session.query(O3101Table).all()
+#     print(plists)
+#     for plist in plists:
+#         plist = O3101.dict(plist)
+#         newPlists.append(plist)
+#     print(newPlists)
+#     return newPlists
 
 
-@app.get("/prices")  # '/prices'로 get 요청이 들어오면 실행
-def get_prices():  # 게임 가져오기
+@app.get("/prices/{symbol}")  # '/prices'로 get 요청이 들어오면 실행
+def get_prices(symbol):  # 게임 가져오기
     """
     Start processing a game
     :return:
     """
-    if data.prices:  # data 안에 값이 있으면
-        return json.dumps(list(data.prices.values()), cls=PriceEncoder)  # json으로 인코딩
+    price_lists=[]
+    if symbol in data.prices.keys():  # data 안에 값이 있으면
+        price_lists.append(data.prices[symbol])
+        print(price_lists)
+        return json.dumps(price_lists, cls=PriceEncoder)  # json으로 인코딩
     return "[]"  # "[]" 반환
 
 

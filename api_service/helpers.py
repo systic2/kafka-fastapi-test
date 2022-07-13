@@ -8,7 +8,7 @@ from kafka import KafkaConsumer
 from kafka.errors import NoBrokersAvailable
 from starlette.websockets import WebSocket
 
-KAFKA_URL = "172.30.1.37:9092"  # kafka 주소
+KAFKA_URL = "172.30.1.15:9092"  # kafka 주소
 
 
 def connect_consumer():  # 컨슈머 연결

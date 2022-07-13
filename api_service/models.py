@@ -24,7 +24,7 @@ class O3101Table(Base):
     CtrtPrAmt = Column(Float, nullable=False)  # 계약당금액
     GdsCd = Column(String(3), nullable=False)  # 상품구분코드
     LstngYr = Column(String(4), nullable=False)  # 월물(년)
-    LStngM = Column(String(1), nullable=False)  # 월물(월)
+    LstngM = Column(String(1), nullable=False)  # 월물(월)
     EcPrc = Column(Float, nullable=False)  # 정산가격
     DlStrtTm = Column(String(6), nullable=False)  # 거래시작시간
     DlEndTm = Column(String(6), nullable=False)  # 거래종료시간
